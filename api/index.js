@@ -6,7 +6,7 @@ const dotenv = require('dotenv').config();
 const router=require('./routes/auth');
 const Authrouter=require('./routes/auth');
 const cookieParser = require('cookie-parser');
-const PORT=process.env.PORT || 4000;
+const PORT=process.env.PORT || 5000;
 const Chatbot=require('./routes/chatbot');
 const bodyParser = require("body-parser");
 const DATABASE_URL=process.env.DATABASE_URL;
@@ -40,3 +40,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log('database at port: ', PORT);
 })
+
+module.exports=app;
